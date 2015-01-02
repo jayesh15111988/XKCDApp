@@ -41,10 +41,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="115" selection-end="115" vertical-scroll-proportion="0.20286396" vertical-offset="0" max-vertical-offset="419">
+            <state line="6" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="-4.08" vertical-offset="0" max-vertical-offset="204">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="21" selection-start="2359" selection-end="2359" vertical-scroll-proportion="0.41728395" vertical-offset="783" max-vertical-offset="2822">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grayscale.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/grayscale.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="142" column="35" selection-start="2916" selection-end="2916" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6273">
               <folding />
             </state>
           </provider>
@@ -63,6 +81,8 @@
         <option value="$PROJECT_DIR$/404.html" />
         <option value="$PROJECT_DIR$/css/mainwebsite.css" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/grayscale.css" />
       </list>
     </option>
   </component>
@@ -140,7 +160,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XKCDComics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XKCDComics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XKCDComics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XKCDComics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fonts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -164,7 +216,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jayeshkawli\Desktop\GitRepos\XKCDComics\img" />
       <recent name="C:\Users\jayeshkawli\Desktop\GitRepos\XKCDComics\css" />
-      <recent name="C:\Users\jayeshkawli\Desktop\GitRepos\XKCDComics" />
+      <recent name="C:\Users\jayeshkawli\Desktop\GitRepos\XKCDComics\css\Fonts" />
+      <recent name="C:\Users\jayeshkawli\Desktop\GitRepos\XKCDComics\js" />
+      <recent name="C:\Users\jayeshkawli\Desktop\GitRepos\XKCDComics\js\vendor" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
@@ -283,7 +337,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="115" selection-end="115" vertical-scroll-proportion="0.20286396" vertical-offset="0" max-vertical-offset="419">
+        <state line="6" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="-4.08" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/grayscale.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="35" selection-start="2916" selection-end="2916" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6273">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="21" selection-start="2359" selection-end="2359" vertical-scroll-proportion="0.41728395" vertical-offset="783" max-vertical-offset="2822">
           <folding />
         </state>
       </provider>
