@@ -1,0 +1,76 @@
+
+
+body{
+	 -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body#notfound { 
+	
+  background: url(../img/notfound.jpg) no-repeat center center fixed;
+}
+body#authfailed { 
+  background: url(../img/noauthority.jpg) no-repeat center center fixed;
+}
+body#servererror{
+background: url(../img/servererror.jpg) no-repeat center center fixed;
+ }
+body#forbidden{
+background: url(../img/forbidden.jpg) no-repeat center center fixed;
+}
+
+
+.smalltitle{
+font-family: sans-serif,'times new roman';
+font-size: 15px;
+line-height: 20px;
+text-transform: uppercase;
+letter-spacing: 3px;
+font-weight: bold;
+color: darkgray;
+margin-top: 5%;
+position: relative;
+}
+
+.bigtitle{
+	font-family: times, Times New Roman, times-roman, georgia, serif;
+	color: #444 !important;
+	margin: 0;
+	padding: 0px 0px 6px 0px;
+	font-size: 51px;
+	letter-spacing: -2px;
+	font-weight: bold;
+	margin-top: 40%;
+
+}
+
+.forbiddenpage{
+width:700px;
+margin-top: 2%;
+margin-left: 45%;
+}
+
+.divfornotfound{
+	width:800px;
+}
+
+.divforauthfailed{
+	color: honeydew;
+	width:800px;
+}
+
+.servererror{
+	margin-top: 5%;
+width: 700px;
+color: black;
+}
+
+a{
+	color:silver;
+}
+
+a:hover{
+color: lightgray;
+}
