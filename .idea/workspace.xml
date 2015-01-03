@@ -53,9 +53,9 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="1093" selection-end="1093" vertical-scroll-proportion="0.034623217" vertical-offset="527" max-vertical-offset="2499">
+            <state line="140" column="16" selection-start="5208" selection-end="5208" vertical-scroll-proportion="0.5277778" vertical-offset="2114" max-vertical-offset="2618">
               <folding>
-                <marker date="1420253319509" expanded="true" signature="1616:1625" placeholder="..." />
+                <marker date="1420254480158" expanded="true" signature="1676:1685" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -391,7 +391,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="50" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1734">
           <folding>
-            <marker date="1420253319509" expanded="true" signature="1616:1625" placeholder="..." />
+            <marker date="1420254480158" expanded="true" signature="1676:1685" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -524,9 +524,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1093" selection-end="1093" vertical-scroll-proportion="0.034623217" vertical-offset="527" max-vertical-offset="2499">
+        <state line="140" column="16" selection-start="5208" selection-end="5208" vertical-scroll-proportion="0.5277778" vertical-offset="2114" max-vertical-offset="2618">
           <folding>
-            <marker date="1420253319509" expanded="true" signature="1616:1625" placeholder="..." />
+            <marker date="1420254480158" expanded="true" signature="1676:1685" placeholder="..." />
           </folding>
         </state>
       </provider>

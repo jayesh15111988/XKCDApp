@@ -9,6 +9,7 @@ angular.module('xkcdComicApp.controllers', []).
         var xAxis, yAxis, colors, x, y, svg, height, width, tip, margin;
 
 
+        var oldCollection = [], newCollection = [];
 
         function initializeD3GraphicsLayer() {
             console.log("Initializing ...");
@@ -47,7 +48,7 @@ angular.module('xkcdComicApp.controllers', []).
                 .attr('class', 'd3-tip')
                 .offset([-10, 0])
                 .html(function(d) {
-                    return "<strong>"+ d.tagName  +"</strong> <span style='color:red'>" + " : " + d.numberOfOccurrence + "</span>";
+                    return "<strong>"+ d.tagName  + " : " +"</strong> <span style='color:red'>"  + d.numberOfOccurrence + "</span>";
                 });
       }
 
@@ -113,30 +114,36 @@ angular.module('xkcdComicApp.controllers', []).
             }
         }
 
+        function initializeAndLoadGraphDataWithData(tagsData) {
+            initializeSVGElement();
+            plotDataWithCollection(tagsData);
+        }
+
         initializeD3GraphicsLayer();
         $scope.numberOfTopTagsToRequest = 10;
         $scope.getTagInfoWith = function(){
 
-            var endURLForTopTagsInfo = baseURL + topTagsExtension + "?beginIndex="+ 0 + "&endIndex=" + $scope.numberOfTopTagsToRequest;
+
+            if($scope.numberOfTopTagsToRequest <= oldCollection.length) {
+                console.log("Loading from existing collection");
+                var subsetOfOriginalCollection = oldCollection.slice(0, $scope.numberOfTopTagsToRequest);
+                initializeAndLoadGraphDataWithData(subsetOfOriginalCollection);
+            }
+            else
+            {
+                var initialIndex = oldCollection.length;
+                var finalIndex   = ($scope.numberOfTopTagsToRequest - initialIndex);
+                console.log("Requesting from server" + "begin index is "+ initialIndex + " And end index is "+ finalIndex);
+            var endURLForTopTagsInfo = baseURL + topTagsExtension + "?beginIndex="+ initialIndex + "&endIndex=" + finalIndex;
             $http.get(endURLForTopTagsInfo).
                 success(function(data, status, headers, config) {
-
-                    initializeSVGElement();
-
-
-
-
-                  plotDataWithCollection(data.topTags);
-
-
-
-
+                    oldCollection = oldCollection.concat(data.topTags);
+                    console.log("Old Collection length "+oldCollection.length);
+                   initializeAndLoadGraphDataWithData(oldCollection);
                 }).
                 error(function(data, status, headers, config) {
                     console.log("Error Occurred while fetching top tags from server " +data);
                 });
-
-
-
+        }
         }
     });
