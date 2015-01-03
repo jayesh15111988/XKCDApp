@@ -26,54 +26,36 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="11" selection-start="1335" selection-end="1342" vertical-scroll-proportion="-6.36" vertical-offset="1082" max-vertical-offset="5338">
+            <state line="73" column="11" selection-start="1335" selection-end="1342" vertical-scroll-proportion="67.08" vertical-offset="2918" max-vertical-offset="5338">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="20" selection-start="1725" selection-end="1725" vertical-scroll-proportion="0.27045456" vertical-offset="731" max-vertical-offset="5032">
+            <state line="199" column="63" selection-start="6907" selection-end="6936" vertical-scroll-proportion="-5.8235292" vertical-offset="3086" max-vertical-offset="5746">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="20" selection-start="2264" selection-end="2264" vertical-scroll-proportion="0.0" vertical-offset="802" max-vertical-offset="3230">
+            <state line="216" column="0" selection-start="9280" selection-end="9280" vertical-scroll-proportion="0.6838843" vertical-offset="3341" max-vertical-offset="4335">
               <folding>
-                <marker date="1420265061505" expanded="true" signature="1676:1685" placeholder="..." />
+                <marker date="1420313022955" expanded="true" signature="1539:1548" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="smoothDivScroll.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/smoothDivScroll.css">
+      <file leaf-file-name="Constants.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/Constants.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="1" selection-start="2297" selection-end="2297" vertical-scroll-proportion="0.0" vertical-offset="839" max-vertical-offset="1411">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainwebsite.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/mainwebsite.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="11" selection-start="828" selection-end="835" vertical-scroll-proportion="-6.36" vertical-offset="521" max-vertical-offset="1377">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="d3Graphics.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/d3Graphics.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="13" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="884">
+            <state line="6" column="22" selection-start="187" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
               <folding />
             </state>
           </provider>
@@ -82,25 +64,7 @@
       <file leaf-file-name="grayscale.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/grayscale.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="18" selection-start="4780" selection-end="4780" vertical-scroll-proportion="0.0" vertical-offset="302" max-vertical-offset="3060">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/Constants.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="47" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="28" selection-start="61" selection-end="73" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+            <state line="162" column="18" selection-start="4780" selection-end="4780" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="2992">
               <folding />
             </state>
           </provider>
@@ -136,8 +100,8 @@
         <option value="$PROJECT_DIR$/js/grayscale.js" />
         <option value="$PROJECT_DIR$/css/smoothDivScroll.css" />
         <option value="$PROJECT_DIR$/js/Constants.js" />
-        <option value="$PROJECT_DIR$/js/controllers.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/controllers.js" />
       </list>
     </option>
   </component>
@@ -146,6 +110,52 @@
     <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Code style issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript function metricsJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript validity issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Portability issues</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+          <State>
+            <id>Probable bugsJavaScript</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -257,7 +267,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.lastSelected" value="fileColors" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -328,6 +338,23 @@
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="db7084db-fff8-49fc-8704-acdb99864b03" name="Default" comment="" />
@@ -347,7 +374,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2327044" sideWeight="0.49962825" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10406504" sideWeight="0.50037175" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10902896" sideWeight="0.50037175" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -401,7 +428,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="50" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1734">
           <folding>
-            <marker date="1420265061505" expanded="true" signature="1676:1685" placeholder="..." />
+            <marker date="1420313022955" expanded="true" signature="1539:1548" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -476,23 +503,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/grayscale.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="18" selection-start="4780" selection-end="4780" vertical-scroll-proportion="0.0" vertical-offset="302" max-vertical-offset="3060">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/d3Graphics.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="13" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="11" selection-start="1335" selection-end="1342" vertical-scroll-proportion="-6.36" vertical-offset="1082" max-vertical-offset="5338">
           <folding />
         </state>
       </provider>
@@ -518,13 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="47" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="28" selection-start="61" selection-end="73" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
@@ -532,19 +538,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="20" selection-start="2264" selection-end="2264" vertical-scroll-proportion="0.0" vertical-offset="802" max-vertical-offset="3230">
-          <folding>
-            <marker date="1420265061505" expanded="true" signature="1676:1685" placeholder="..." />
-          </folding>
+        <state line="73" column="11" selection-start="1335" selection-end="1342" vertical-scroll-proportion="67.08" vertical-offset="2918" max-vertical-offset="5338">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/grayscale.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="162" column="18" selection-start="4780" selection-end="4780" vertical-scroll-proportion="0.0" vertical-offset="302" max-vertical-offset="3060">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="22" selection-start="187" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="20" selection-start="1725" selection-end="1725" vertical-scroll-proportion="0.27045456" vertical-offset="731" max-vertical-offset="5032">
+        <state line="199" column="63" selection-start="6907" selection-end="6936" vertical-scroll-proportion="-5.8235292" vertical-offset="3086" max-vertical-offset="5746">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="216" column="0" selection-start="9280" selection-end="9280" vertical-scroll-proportion="0.6838843" vertical-offset="3341" max-vertical-offset="4335">
+          <folding>
+            <marker date="1420313022955" expanded="true" signature="1539:1548" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

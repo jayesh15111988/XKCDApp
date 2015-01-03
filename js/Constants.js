@@ -4,3 +4,4 @@
 var baseURL = "http://jayeshkawli.com/xkcdapp/";
 var topTagsExtension = "getTopTags.php";
 var imagesByTagsExtension = "imagesByTags.php";
+var imagesByInputRange = "imagesFromRange.php";

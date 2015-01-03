@@ -19,55 +19,60 @@
 
     <!-- Custom Fonts -->
     <link href="css/Fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="css/d3Graphics.css" rel="stylesheet" type="text/css">
-    <link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css" />
+    <link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css"/>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<style>
+    <style>
 
-    .tagsContainer {
-        background-color: red;
-        width: 100%;
-        height: 650px;
-        text-align: center;
-        padding-top: 2%;
-    }
+        .tagsContainer {
+            background-color: red;
+            width: 100%;
+            height: 650px;
+            text-align: center;
+            padding-top: 2%;
+        }
 
-    .albumCollection {
-        background-color: #000000;
-        height: auto;
-    }
+        .albumCollection {
+            background-color: #000000;
+            height: auto;
+        }
 
-    /* Style for jQuery image slider */
-    #makeMeScrollable
-    {
-        width:100%;
-        height: auto;
-        position: relative;
-    }
+        /* Style for jQuery image slider */
+        .makeMeScrollable .imagesFromSequence {
+            width: 100%;
+            height: 400px;
+            position: relative;
+        }
 
-    /* Replace the last selector for the type of element you have in
-       your scroller. If you have div's use #makeMeScrollable div.scrollableArea div,
-       if you have links use #makeMeScrollable div.scrollableArea a and so on. */
-    #makeMeScrollable div.scrollableArea img
-    {
-        position: relative;
-        float: left;
-        margin: 0;
-        padding: 0;
+        /* Replace the last selector for the type of element you have in
+           your scroller. If you have div's use #makeMeScrollable div.scrollableArea div,
+           if you have links use #makeMeScrollable div.scrollableArea a and so on. */
+        .makeMeScrollable .imagesFromSequence div.scrollableArea img {
+            position: relative;
+            float: left;
+            margin: 0;
+            padding: 0;
 
-    }
+        }
+
+        .imagesFromRange {
+            background-color: #245269;
+            height: auto;
+        }
 
     </style>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="xkcdComicApp" ng-controller="mainPageController">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="xkcdComicApp"
+      ng-controller="mainPageController">
 
 <!-- Navigation -->
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -77,7 +82,7 @@
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand page-scroll" href="#page-top">
-                <i class="fa fa-play-circle"></i>  <span class="light">Start</span> Bootstrap
+                <i class="fa fa-play-circle"></i> <span class="light">Start</span> Bootstrap
             </a>
         </div>
 
@@ -111,7 +116,9 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h1 class="brand-heading">Grayscale</h1>
-                    <p class="intro-text">A free, responsive, one page Bootstrap theme.<br>Created by Start Bootstrap.</p>
+
+                    <p class="intro-text">A free, responsive, one page Bootstrap theme.<br>Created by Start Bootstrap.
+                    </p>
                     <a href="#about" class="btn btn-circle page-scroll">
                         <i class="fa fa-angle-double-down animated"></i>
                     </a>
@@ -127,15 +134,18 @@
         <p>
             <label>Please specify number of top tags you are sending request for</label>
         </p>
+
         <div class="form-group">
             <div class="input-group">
                 <div class="input-group-addon">Top Tags</div>
-                <input type="text" class="form-control" ng-model = "numberOfTopTagsToRequest" id="numberOftopTagsValue" placeholder="5">
+                <input type="text" class="form-control" ng-model="numberOfTopTagsToRequest" id="numberOftopTagsValue"
+                       placeholder="5">
+
                 <div class="input-group-addon"></div>
             </div>
         </div>
 
-        <button data-ng-click="getTagInfoWith();" class="btn btn-primary">Get Tag Info</button>
+        <button data-ng-disabled="tagInfoButtonIsDisabled" data-ng-click="getTagInfoWith();" class="btn btn-primary">Get Tag Info</button>
 
         <div id="chart">
 
@@ -152,28 +162,48 @@
         <p>
             <label>Please tags separating in comma you are sending request for</label>
         </p>
+
         <div class="form-group">
             <div class="input-group">
                 <div class="input-group-addon">Tags List</div>
 
-                <input type="text" class="form-control" ng-model = "tagsList" placeholder="">
+                <input type="text" class="form-control" ng-model="tagsList" placeholder="">
 
             </div>
         </div>
 
-        <button data-ng-click="getImagesMatchingTags();" class="btn btn-primary">Get Images</button>
+        <button data-ng-disabled="imagesByTagButtonIsDisabled" data-ng-click="getImagesMatchingTags();" class="btn btn-primary">Get Images</button>
 
-        <div id="makeMeScrollable">
+        <div class="makeMeScrollable" ng-style="{'height': maximumHeight}">
+
+        </div>
+    </form>
+</section>
+
+<section class="tagsContainer albumCollection imagesFromRange ">
+
+    <form class="form-inline">
+        <p>
+            <label>Please specify the range of images you are sending request for</label>
+        </p>
+
+        <div class="form-group">
+            <label class="sr-only" for="sIndex">Start Index</label>
+            <input type="number" min="1" class="form-control" data-ng-model="imageStartIndex" id="sIndex"
+                   placeholder="Start Index">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="eIndex">End Index</label>
+            <input type="number" min="1" class="form-control" data-ng-model="imageEndIndex" id="eIndex"
+                   placeholder="End Index">
+        </div>
+        <button data-ng-disabled="imagesByRangeButtonIsDisabled" data-ng-click="getImagesFromRange();" class="btn btn-primary">Get Images</button>
+
+        <div class="imagesFromSequence" ng-style="{'height': maximumHeightForSequenceImages}">
 
         </div>
 
-
     </form>
-
-
-
-
-
 
 </section>
 
@@ -184,8 +214,10 @@
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Download Grayscale</h2>
+
                 <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit
+                    Download Page</a>
             </div>
         </div>
     </div>
@@ -196,18 +228,24 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <h2>Contact Start Bootstrap</h2>
-            <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+
+            <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates
+                and themes, or to just say hello!</p>
+
             <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
             </p>
             <ul class="list-inline banner-social-buttons">
                 <li>
-                    <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i
+                            class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                 </li>
                 <li>
-                    <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i
+                            class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                 </li>
                 <li>
-                    <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i
+                            class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
                 </li>
             </ul>
         </div>
@@ -239,7 +277,7 @@
 <!-- Angular JS CDN file -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
 <script src="js/Constants.js"></script>
-<script src="js/app.js"> </script>
+<script src="js/app.js"></script>
 <script src="js/mainPageController.js"></script>
 <script src="js/controllers.js"></script>
 
@@ -279,7 +317,11 @@
     // Initialize the plugin with no custom options
     $(document).ready(function () {
         // None of the options are set
-        $("div#makeMeScrollable").smoothDivScroll({
+        $("div.makeMeScrollable").smoothDivScroll({
+            autoScrollingMode: "onStart"
+        });
+
+        $("div.imagesFromSequence").smoothDivScroll({
             autoScrollingMode: "onStart"
         });
     });
