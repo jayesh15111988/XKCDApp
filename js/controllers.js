@@ -3,11 +3,32 @@
  */
 "use strict";
 
-angular.module('xkcdComicApp.controllers', []).
-    controller('mainPageController', function ($scope, $http) {
+angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
+    controller('mainPageController', function ($scope, $http, $modal) {
 
         var xAxis, yAxis, colors, x, y, svg, height, width, tip, margin;
-        var oldCollection = [], newCollection = [];
+        var oldCollection = [];
+
+
+        $scope.open = function (message) {
+            var modalInstance = $modal.open({
+                templateUrl: 'myModalContent.html',
+                controller: 'ModalInstanceCtrl',
+                resolve: {
+                    inputMessage : function() {
+                        return message;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function (selectedItem) {
+                console.log("Modal dismissed with ok button");
+            }, function () {
+                console.log("Modal dismissed With cancel button");
+            });
+        };
+
+
 
         function initializeD3GraphicsLayer() {
 
@@ -53,14 +74,20 @@ angular.module('xkcdComicApp.controllers', []).
         function getImagesWithInputRange() {
             $scope.maximumHeightForSequenceImages = "300px";
 
-            //Hardcoding url extension, cause Angular JS is a piece of shit just like Swift which would fault at any time it wants.
+            //Hard coding url extension, cause Angular JS is a piece of shit just like Swift which would fault at any time it wants.
             //This is absurd and don't know why it fucking happens here - FIXED for now!
 
             var endURLForImagesMatchingTagsList = baseURL + imagesByInputRange + "?startIndex=" + $scope.imageStartIndex+"&endIndex="+$scope.imageEndIndex;
             $http.get(endURLForImagesMatchingTagsList).
                 success(function (data, status, headers, config) {
                     var imagesCollection = data.imagesArray;
-                    $("div.imagesFromSequence").smoothDivScroll("getHtmlContent", imagesCollection, "replace");
+
+                    if(imagesCollection.length > 0) {
+                        $("div.imagesFromSequence").smoothDivScroll("getHtmlContent", imagesCollection, "replace");
+                    }
+                    else {
+                        $scope.open("No images matching input sequence found in the database");
+                    }
                     $scope.maximumHeightForSequenceImages = data.maxHeight
                 }).
                 error(function (data, status, headers, config) {
@@ -77,7 +104,13 @@ angular.module('xkcdComicApp.controllers', []).
                 $http.get(endURLForImagesMatchingTagsList).
                     success(function (data, status, headers, config) {
                         var imagesCollection = data.imagesArray;
-                        $("div.makeMeScrollable").smoothDivScroll("getHtmlContent", imagesCollection, "replace");
+
+                        if(imagesCollection.length > 0) {
+                            $("div.makeMeScrollable").smoothDivScroll("getHtmlContent", imagesCollection, "replace");
+                        } else {
+                            $scope.open("No images matching combination of given tag(s) found in the database");
+                        }
+
                         $scope.maximumHeight = data.maxHeight
                     }).
                     error(function (data, status, headers, config) {
@@ -248,3 +281,15 @@ angular.module('xkcdComicApp.controllers', []).
             getImagesWithInputRange();
         }
     });
+
+angular.module('xkcdComicApp.controllers').controller('ModalInstanceCtrl', function ($scope, $modalInstance, inputMessage) {
+
+    $scope.modalMessage = inputMessage;
+    $scope.ok = function () {
+        $modalInstance.close();
+    };
+
+    $scope.cancel = function () {
+        $modalInstance.dismiss('cancel');
+    };
+});

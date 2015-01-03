@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Grayscale - Start Bootstrap Theme</title>
+    <title>XKCD Comic Viewer</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -24,6 +24,10 @@
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="css/d3Graphics.css" rel="stylesheet" type="text/css">
     <link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css"/>
+
+    <!-- Custom icon for tab page -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -77,6 +81,12 @@
         .extraTopMargin {
             margin-top: -200px;
         }
+
+        .credits {
+            font-size: 14px;
+            margin-top: 15px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -86,6 +96,22 @@
 <!-- Navigation -->
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
+
+        <script type="text/ng-template" id="myModalContent.html">
+            <div class="modal-header" style="color: #000000">
+                <h4 class="modal-title">Message from XKCD comic app</h4>
+            </div>
+
+            <div class="modal-body" style="color: #000000; font-size: 20px;">
+               {{modalMessage}}
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" ng-click="ok()">Got it!</button>
+            </div>
+        </script>
+
+
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                 <i class="fa fa-bars"></i>
@@ -223,9 +249,16 @@
                             class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
                 </li>
             </ul>
+
         </div>
     </div>
 </section>
+
+<div class="credits">
+Bootstrap theme by the courtesy of  <a href="http://startbootstrap.com/">startbootstrap </a>
+</div>
+
+
 
 
 <!-- jQuery -->
@@ -241,7 +274,9 @@
 <script src="js/grayscale.js"></script>
 
 <!-- Angular JS CDN file -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+
 <script src="js/Constants.js"></script>
 <script src="js/app.js"></script>
 <script src="js/mainPageController.js"></script>
@@ -292,6 +327,10 @@
         });
     });
 </script>
+
+
+<!-- JavaScript Template for showing modal view -->
+
 
 </body>
 

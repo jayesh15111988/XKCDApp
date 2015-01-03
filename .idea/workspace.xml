@@ -32,25 +32,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="24" selection-start="3649" selection-end="3649" vertical-scroll-proportion="0.44347826" vertical-offset="1649" max-vertical-offset="5168">
+            <state line="113" column="0" selection-start="3602" selection-end="3602" vertical-scroll-proportion="-6.5384617" vertical-offset="1751" max-vertical-offset="5831">
               <folding>
                 <element signature="n#style#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1420327377900" expanded="true" signature="3204:3218" placeholder="..." />
+                <marker date="1420327377900" expanded="true" signature="3219:3311" placeholder="..." />
+                <marker date="1420327377900" expanded="true" signature="3357:3389" placeholder="..." />
+                <marker date="1420327377900" expanded="true" signature="3390:3441" placeholder="..." />
+                <marker date="1420327377900" expanded="true" signature="3481:3581" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="222" column="29" selection-start="9413" selection-end="9413" vertical-scroll-proportion="0.0" vertical-offset="3774" max-vertical-offset="4335">
+            <state line="116" column="18" selection-start="4512" selection-end="4512" vertical-scroll-proportion="0.93004113" vertical-offset="1520" max-vertical-offset="5100">
               <folding>
-                <marker date="1420313022955" expanded="true" signature="1539:1548" placeholder="..." />
+                <marker date="1420327520039" expanded="true" signature="2157:2166" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -59,9 +64,16 @@
       <file leaf-file-name="Constants.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Constants.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="22" selection-start="187" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="204">
+            <state line="6" column="10" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favicon.ico" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/favicon.ico">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -104,8 +116,9 @@
         <option value="$PROJECT_DIR$/js/grayscale.js" />
         <option value="$PROJECT_DIR$/css/smoothDivScroll.css" />
         <option value="$PROJECT_DIR$/js/Constants.js" />
-        <option value="$PROJECT_DIR$/js/controllers.js" />
+        <option value="$PROJECT_DIR$/js/popOverController.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/controllers.js" />
       </list>
     </option>
   </component>
@@ -284,11 +297,11 @@
       <recent name="C:\Users\jayeshkawli\Desktop\GitRepos\XKCDComics\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jayeshkawli\Desktop\GitRepos\XKCDComics\js" />
+      <recent name="C:\Users\jayeshkawli\Desktop\GitRepos\XKCDComics" />
       <recent name="C:\Users\jayeshkawli\Desktop\GitRepos\XKCDComics\img\Cursors" />
       <recent name="C:\Users\jayeshkawli\Desktop\GitRepos\XKCDComics\img" />
       <recent name="C:\Users\jayeshkawli\Desktop\GitRepos\XKCDComics\css" />
-      <recent name="C:\Users\jayeshkawli\Desktop\GitRepos\XKCDComics\js" />
-      <recent name="C:\Users\jayeshkawli\Desktop\GitRepos\XKCDComics\css\Fonts" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
@@ -422,6 +435,11 @@
             <element signature="n#style#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1420327377900" expanded="true" signature="3204:3218" placeholder="..." />
+            <marker date="1420327377900" expanded="true" signature="3219:3311" placeholder="..." />
+            <marker date="1420327377900" expanded="true" signature="3357:3389" placeholder="..." />
+            <marker date="1420327377900" expanded="true" signature="3390:3441" placeholder="..." />
+            <marker date="1420327377900" expanded="true" signature="3481:3581" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -430,7 +448,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="222" column="29" selection-start="9413" selection-end="9413" vertical-scroll-proportion="0.0" vertical-offset="3774" max-vertical-offset="4335">
           <folding>
-            <marker date="1420313022955" expanded="true" signature="1539:1548" placeholder="..." />
+            <marker date="1420327520039" expanded="true" signature="2157:2166" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -468,6 +486,11 @@
             <element signature="n#style#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1420327377900" expanded="true" signature="3204:3218" placeholder="..." />
+            <marker date="1420327377900" expanded="true" signature="3219:3311" placeholder="..." />
+            <marker date="1420327377900" expanded="true" signature="3357:3389" placeholder="..." />
+            <marker date="1420327377900" expanded="true" signature="3390:3441" placeholder="..." />
+            <marker date="1420327377900" expanded="true" signature="3481:3581" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -483,7 +506,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="50" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1734">
           <folding>
-            <marker date="1420313022955" expanded="true" signature="1539:1548" placeholder="..." />
+            <marker date="1420327520039" expanded="true" signature="2157:2166" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -597,29 +620,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="187" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/js/Constants.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="222" column="29" selection-start="9413" selection-end="9413" vertical-scroll-proportion="0.0" vertical-offset="3341" max-vertical-offset="4335">
-          <folding>
-            <marker date="1420313022955" expanded="true" signature="1539:1548" placeholder="..." />
-          </folding>
+        <state line="6" column="10" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="24" selection-start="3649" selection-end="3649" vertical-scroll-proportion="0.44347826" vertical-offset="1649" max-vertical-offset="5168">
+        <state line="113" column="0" selection-start="3602" selection-end="3602" vertical-scroll-proportion="-6.5384617" vertical-offset="1751" max-vertical-offset="5831">
           <folding>
             <element signature="n#style#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1420327377900" expanded="true" signature="3204:3218" placeholder="..." />
+            <marker date="1420327377900" expanded="true" signature="3219:3311" placeholder="..." />
+            <marker date="1420327377900" expanded="true" signature="3357:3389" placeholder="..." />
+            <marker date="1420327377900" expanded="true" signature="3390:3441" placeholder="..." />
+            <marker date="1420327377900" expanded="true" signature="3481:3581" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="18" selection-start="4512" selection-end="4512" vertical-scroll-proportion="0.93004113" vertical-offset="1520" max-vertical-offset="5100">
+          <folding>
+            <marker date="1420327520039" expanded="true" signature="2157:2166" placeholder="..." />
           </folding>
         </state>
       </provider>
