@@ -22,7 +22,7 @@
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="css/d3Graphics.css" rel="stylesheet" type="text/css">
-
+    <link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -37,6 +37,30 @@
         height: 650px;
         text-align: center;
         padding-top: 2%;
+    }
+
+    .albumCollection {
+        background-color: #000000;
+        height: auto;
+    }
+
+    /* Style for jQuery image slider */
+    #makeMeScrollable
+    {
+        width:100%;
+        height: auto;
+        position: relative;
+    }
+
+    /* Replace the last selector for the type of element you have in
+       your scroller. If you have div's use #makeMeScrollable div.scrollableArea div,
+       if you have links use #makeMeScrollable div.scrollableArea a and so on. */
+    #makeMeScrollable div.scrollableArea img
+    {
+        position: relative;
+        float: left;
+        margin: 0;
+        padding: 0;
 
     }
 
@@ -106,7 +130,7 @@
         <div class="form-group">
             <div class="input-group">
                 <div class="input-group-addon">Top Tags</div>
-                <input type="text" class="form-control" ng-model = "numberOfTopTagsToRequest" id="numberOftopTagsValue" placeholder="10">
+                <input type="text" class="form-control" ng-model = "numberOfTopTagsToRequest" id="numberOftopTagsValue" placeholder="5">
                 <div class="input-group-addon"></div>
             </div>
         </div>
@@ -122,15 +146,35 @@
     </p>
 </section>
 
-<section id="about" class="container content-section text-center">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <h2>About Grayscale</h2>
-            <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-            <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-            <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+<section class="tagsContainer albumCollection">
+
+    <form class="form-inline">
+        <p>
+            <label>Please tags separating in comma you are sending request for</label>
+        </p>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon">Tags List</div>
+
+                <input type="text" class="form-control" ng-model = "tagsList" placeholder="">
+
+            </div>
         </div>
-    </div>
+
+        <button data-ng-click="getImagesMatchingTags();" class="btn btn-primary">Get Images</button>
+
+        <div id="makeMeScrollable">
+
+        </div>
+
+
+    </form>
+
+
+
+
+
+
 </section>
 
 
@@ -202,6 +246,45 @@
 <!-- JS Files for D3 plotting -->
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+<!-- Extra JAvaScript for showing images on slider view -->
+<!-- LOAD JAVASCRIPT LATE - JUST BEFORE THE BODY TAG
+	     That way the browser will have loaded the images
+		 and will know the width of the images. No need to
+		 specify the width in the CSS or inline. -->
+
+<!-- jQuery library - Please load it from Google API's -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+
+<!-- jQuery UI (Custom Download containing only Widget and Effects Core)
+     You can make your own at: http://jqueryui.com/download -->
+<script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+
+<!-- Latest version (3.1.4) of jQuery Mouse Wheel by Brandon Aaron
+     You will find it here: https://github.com/brandonaaron/jquery-mousewheel -->
+<script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
+
+<!-- jQuery Kinectic (1.8.2) used for touch scrolling -->
+<!-- https://github.com/davetayls/jquery.kinetic/ -->
+<script src="js/jquery.kinetic.min.js" type="text/javascript"></script>
+
+<!-- Smooth Div Scroll 1.3 minified-->
+<script src="js/jquery.smoothdivscroll-1.3-min.js" type="text/javascript"></script>
+
+<!-- If you want to look at the uncompressed version you find it at
+     js/jquery.smoothDivScroll-1.3.js -->
+
+<!-- Plugin initialization -->
+<script type="text/javascript">
+    // Initialize the plugin with no custom options
+    $(document).ready(function () {
+        // None of the options are set
+        $("div#makeMeScrollable").smoothDivScroll({
+            autoScrollingMode: "onStart"
+        });
+    });
+</script>
+
 </body>
 
 </html>

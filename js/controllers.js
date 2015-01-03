@@ -52,6 +52,40 @@ angular.module('xkcdComicApp.controllers', []).
                 });
       }
 
+        $scope.getImagesMatchingTags = function() {
+           getMatchingImagesWithTag();
+        }
+
+        function getMatchingImagesWithTag() {
+
+            if($scope.tagsList.length > 0) {
+
+            var endURLForImagesMatchingTagsList = baseURL + imagesByTagsExtension + "?tagsList="+ $scope.tagsList;
+            $http.get(endURLForImagesMatchingTagsList).
+                success(function(data, status, headers, config) {
+                var imagesCollection = data.imagesArray;
+                    console.log("Collection "+imagesCollection);
+                    $("div#makeMeScrollable").smoothDivScroll("getHtmlContent",imagesCollection, "replace");
+
+                }).
+                error(function(data, status, headers, config) {
+                    console.log("Error Occurred while fetching top tags from server " +data);
+                });
+            }
+        }
+
+        $scope.loadImageString = function() {
+            var imageString = "<img src='img/demo/field.jpg' alt='Demo image' id='field' />" +
+                "<img src='img/demo/gnome.jpg' alt='Demo image' id='gnome' />" +
+                "<img src='img/demo/pencils.jpg' alt='Demo image' id='pencils' />" +
+                "<img src='img/demo/golf.jpg' alt='Demo image' id='golf' />" +
+                "<img src='img/demo/river.jpg' alt='Demo image' id='river' />" +
+                "<img src='img/demo/train.jpg' alt='Demo image' id='train' />" +
+                "<img src='img/demo/leaf.jpg' alt='Demo image' id='leaf' />" +
+                "<img src='img/demo/dog.jpg' alt='Demo image' id='dog' />";
+            $("div#makeMeScrollable").smoothDivScroll("getHtmlContent", imageString, "replace");
+
+        }
 
         function initializeSVGElement() {
             //Remove old SVG Element from document as we are appending it each time
@@ -119,11 +153,7 @@ angular.module('xkcdComicApp.controllers', []).
             plotDataWithCollection(tagsData);
         }
 
-        initializeD3GraphicsLayer();
-        $scope.numberOfTopTagsToRequest = 10;
-        $scope.getTagInfoWith = function(){
-
-
+        function sendRequestToServerForNumberOfTopTags() {
             if($scope.numberOfTopTagsToRequest <= oldCollection.length) {
                 console.log("Loading from existing collection");
                 var subsetOfOriginalCollection = oldCollection.slice(0, $scope.numberOfTopTagsToRequest);
@@ -134,16 +164,22 @@ angular.module('xkcdComicApp.controllers', []).
                 var initialIndex = oldCollection.length;
                 var finalIndex   = ($scope.numberOfTopTagsToRequest - initialIndex);
                 console.log("Requesting from server" + "begin index is "+ initialIndex + " And end index is "+ finalIndex);
-            var endURLForTopTagsInfo = baseURL + topTagsExtension + "?beginIndex="+ initialIndex + "&endIndex=" + finalIndex;
-            $http.get(endURLForTopTagsInfo).
-                success(function(data, status, headers, config) {
-                    oldCollection = oldCollection.concat(data.topTags);
-                    console.log("Old Collection length "+oldCollection.length);
-                   initializeAndLoadGraphDataWithData(oldCollection);
-                }).
-                error(function(data, status, headers, config) {
-                    console.log("Error Occurred while fetching top tags from server " +data);
-                });
+                var endURLForTopTagsInfo = baseURL + topTagsExtension + "?beginIndex="+ initialIndex + "&endIndex=" + finalIndex;
+                $http.get(endURLForTopTagsInfo).
+                    success(function(data, status, headers, config) {
+                        oldCollection = oldCollection.concat(data.topTags);
+                        console.log("Old Collection length "+oldCollection.length);
+                        initializeAndLoadGraphDataWithData(oldCollection);
+                    }).
+                    error(function(data, status, headers, config) {
+                        console.log("Error Occurred while fetching top tags from server " +data);
+                    });
+            }
         }
+        initializeD3GraphicsLayer();
+        $scope.numberOfTopTagsToRequest = 5;
+        sendRequestToServerForNumberOfTopTags();
+        $scope.getTagInfoWith = function(){
+          sendRequestToServerForNumberOfTopTags();
         }
     });
