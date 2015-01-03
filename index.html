@@ -34,9 +34,9 @@
     .tagsContainer {
         background-color: red;
         width: 100%;
-        height: 600px;
+        height: 650px;
         text-align: center;
-        padding-top: 5%;
+        padding-top: 2%;
 
     }
 
@@ -100,10 +100,10 @@
 <!-- About Section -->
 <section class="tagsContainer">
     <form class="form-inline">
-        <div class="form-group">
-
-
+        <p>
             <label>Please specify number of top tags you are sending request for</label>
+        </p>
+        <div class="form-group">
             <div class="input-group">
                 <div class="input-group-addon">Top Tags</div>
                 <input type="text" class="form-control" ng-model = "numberOfTopTagsToRequest" id="numberOftopTagsValue" placeholder="10">
@@ -113,10 +113,10 @@
 
         <button data-ng-click="getTagInfoWith();" class="btn btn-primary">Get Tag Info</button>
 
-        <!-- D3 graphics and tooltip shamelessly taken from http://bl.ocks.org/Caged/6476579 -->
         <div id="chart">
 
         </div>
+
     </form>
     <p>
     </p>
