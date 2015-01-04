@@ -10,6 +10,20 @@ angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
         var oldCollection = [];
 
 
+        $scope.getTagsByImageIdentifier = function(inputImageIdentifier) {
+
+            var endURLForTagsWithImageIdentifier = baseURL + imageTagsCollection + "?imageIdentifier=" + inputImageIdentifier;
+
+            $http.get(endURLForTagsWithImageIdentifier).
+                success(function (data, status, headers, config) {
+                    var allTags = data.tagsCollection;
+                    $scope.open(allTags);
+                }).
+                error(function (data, status, headers, config) {
+                    console.log("Error Occurred while fetching collection of tags for image with given identifier " + data);
+                });
+        }
+
         $scope.open = function (message) {
             var modalInstance = $modal.open({
                 templateUrl: 'myModalContent.html',
@@ -88,7 +102,7 @@ angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
                     else {
                         $scope.open("No images matching input sequence found in the database");
                     }
-                    $scope.maximumHeightForSequenceImages = data.maxHeight
+                    $scope.maximumHeightForSequenceImages = data.maxHeight;
                 }).
                 error(function (data, status, headers, config) {
                     console.log("Error Occurred while fetching top tags from server " + data);

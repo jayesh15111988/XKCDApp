@@ -89,8 +89,8 @@
         }
     </style>
 </head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="xkcdComicApp"
+<body>
+<div id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="xkcdComicApp"
       ng-controller="mainPageController">
 
 <!-- Navigation -->
@@ -329,9 +329,19 @@ Bootstrap theme by the courtesy of  <a href="http://startbootstrap.com/">startbo
 </script>
 
 
-<!-- JavaScript Template for showing modal view -->
+<script>
+    //To get the tags of image with given identifier
+    function openDescription(inputImageIdentifier) {
 
+        //This is very bad practive combining DOM with angular element, but i cannot think of alternative way to
+        //Achieve what is being done here
 
+        var angularController = angular.element(document.getElementById('page-top'));
+        angularController.scope().getTagsByImageIdentifier(inputImageIdentifier);
+    }
+    </script>
+
+</div>
 </body>
 
 </html>
