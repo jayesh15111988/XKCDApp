@@ -17,11 +17,11 @@ angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
         $scope.getTagsByImageIdentifier = function(inputImageIdentifier) {
 
             var endURLForTagsWithImageIdentifier = baseURL + imageTagsCollection + "?imageIdentifier=" + inputImageIdentifier;
-
             $http.get(endURLForTagsWithImageIdentifier).
                 success(function (data, status, headers, config) {
                     var allTags = data.tagsCollection;
-                    $scope.open(allTags);
+                    var escapedAllTagsString = $('<textarea />').html(allTags).text();
+                    $scope.open(escapedAllTagsString);
                 }).
                 error(function (data, status, headers, config) {
                     console.log("Error Occurred while fetching collection of tags for image with given identifier " + data);
@@ -106,6 +106,7 @@ angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
                         $("div.imagesFromSequence").smoothDivScroll("getHtmlContent", imagesCollection, "replace");
                     }
                     else {
+                        $("div.imagesFromSequence").smoothDivScroll("getHtmlContent", "<div></div>", "replace");
                         $scope.open("No images matching input sequence found in the database");
                     }
                     $scope.maximumHeightForSequenceImages = data.maxHeight;
@@ -137,6 +138,7 @@ angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
                         if(imagesCollection.length > 0) {
                             $("div.makeMeScrollable").smoothDivScroll("getHtmlContent", imagesCollection, "replace");
                         } else {
+                            $("div.makeMeScrollable").smoothDivScroll("getHtmlContent", "<div></div>", "replace");
                             $scope.open("No images matching combination of given tag(s) found in the database");
                         }
 
@@ -310,19 +312,24 @@ angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
         $scope.getImagesMatchingTags = function () {
             oldImagesMatchingTags = [];
             getMatchingImagesWithTag();
-            setTimeout(function(){
-                getMatchingImagesWithTag();
-                oldImagesMatchingTags = [];
-            }, 1000);
+
+            if(oldImagesMatchingTags.length > 0) {
+                setTimeout(function(){
+                    getMatchingImagesWithTag();
+                    oldImagesMatchingTags = [];
+                }, 1000);
+            }
         }
 
         $scope.getImagesFromRange = function () {
             oldImagesFromRange = [];
             getImagesWithInputRange();
-            setTimeout(function(){
-                getImagesWithInputRange();
-                oldImagesFromRange = [];
-            }, 1000);
+            if(oldImagesFromRange.length > 0) {
+                setTimeout(function(){
+                    getImagesWithInputRange();
+                    oldImagesFromRange = [];
+                }, 1000);
+            }
         }
     });
 
