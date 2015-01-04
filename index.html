@@ -182,7 +182,7 @@
 
         <button data-ng-disabled="imagesByTagButtonIsDisabled" data-ng-click="getImagesMatchingTags();" class="btn btn-primary">Get Images</button>
 
-        <div class="makeMeScrollable" ng-style="{'height': maximumHeight}">
+        <div class="makeMeScrollable" ng-style="{'height': maximumHeight}" ng-show="toShowMatchingTagsImages">
 
         </div>
     </form>
@@ -204,7 +204,7 @@
                    placeholder="End Index">
         </div>
         <button data-ng-disabled="imagesByRangeButtonIsDisabled" data-ng-click="getImagesFromRange();" class="btn btn-primary">Get Images</button>
-        <div class="imagesFromSequence" ng-style="{'height': maximumHeightForSequenceImages}">
+        <div class="imagesFromSequence" ng-style="{'height': maximumHeightForSequenceImages}" ng-show="toShowInputRangeImages">
         </div>
     </form>
 </section>

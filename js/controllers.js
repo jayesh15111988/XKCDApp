@@ -8,7 +8,11 @@ angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
 
         var xAxis, yAxis, colors, x, y, svg, height, width, tip, margin;
         var oldCollection = [];
+        var oldImagesMatchingTags = [];
+        var oldImagesFromRange = [];
 
+        $scope.toShowMatchingTagsImages = true;
+        $scope.toShowInputRangeImages = true;
 
         $scope.getTagsByImageIdentifier = function(inputImageIdentifier) {
 
@@ -90,12 +94,14 @@ angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
 
             //Hard coding url extension, cause Angular JS is a piece of shit just like Swift which would fault at any time it wants.
             //This is absurd and don't know why it fucking happens here - FIXED for now!
-
-            var endURLForImagesMatchingTagsList = baseURL + imagesByInputRange + "?startIndex=" + $scope.imageStartIndex+"&endIndex="+$scope.imageEndIndex;
-            $http.get(endURLForImagesMatchingTagsList).
+            if(oldImagesFromRange.length == 0)
+            {
+                console.log("From server");
+            var endURLForImagesInputRange = baseURL + imagesByInputRange + "?startIndex=" + $scope.imageStartIndex+"&endIndex="+$scope.imageEndIndex;
+            $http.get(endURLForImagesInputRange).
                 success(function (data, status, headers, config) {
                     var imagesCollection = data.imagesArray;
-
+                    oldImagesFromRange = imagesCollection;
                     if(imagesCollection.length > 0) {
                         $("div.imagesFromSequence").smoothDivScroll("getHtmlContent", imagesCollection, "replace");
                     }
@@ -108,17 +114,26 @@ angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
                     console.log("Error Occurred while fetching top tags from server " + data);
                 });
         }
+        else {
+                console.log("From cache");
+                $("div.imagesFromSequence").smoothDivScroll("getHtmlContent", oldImagesFromRange, "replace");
+        }
+        }
 
         function getMatchingImagesWithTag() {
 
             if ($scope.tagsList.length > 0) {
 
+                if(oldImagesMatchingTags.length == 0){
                 $scope.maximumHeight = "300px";
+                    console.log("From server");
                 var endURLForImagesMatchingTagsList = baseURL + imagesByTagsExtension + "?tagsList=" + $scope.tagsList;
                 $http.get(endURLForImagesMatchingTagsList).
                     success(function (data, status, headers, config) {
-                        var imagesCollection = data.imagesArray;
 
+
+                        var imagesCollection = data.imagesArray;
+                        oldImagesMatchingTags = imagesCollection;
                         if(imagesCollection.length > 0) {
                             $("div.makeMeScrollable").smoothDivScroll("getHtmlContent", imagesCollection, "replace");
                         } else {
@@ -130,6 +145,11 @@ angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
                     error(function (data, status, headers, config) {
                         console.log("Error Occurred while fetching top tags from server " + data);
                     });
+            }
+                else {
+                    console.log("From cache");
+                    $("div.makeMeScrollable").smoothDivScroll("getHtmlContent", oldImagesMatchingTags, "replace");
+                }
             }
         }
 
@@ -288,11 +308,21 @@ angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
         }
 
         $scope.getImagesMatchingTags = function () {
+            oldImagesMatchingTags = [];
             getMatchingImagesWithTag();
+            setTimeout(function(){
+                getMatchingImagesWithTag();
+                oldImagesMatchingTags = [];
+            }, 1000);
         }
 
         $scope.getImagesFromRange = function () {
+            oldImagesFromRange = [];
             getImagesWithInputRange();
+            setTimeout(function(){
+                getImagesWithInputRange();
+                oldImagesFromRange = [];
+            }, 1000);
         }
     });
 
