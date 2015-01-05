@@ -54,6 +54,10 @@
             position: relative;
         }
 
+        .smallFont {
+            font-size: 16px;
+        }
+
         /* Replace the last selector for the type of element you have in
            your scroller. If you have div's use #makeMeScrollable div.scrollableArea div,
            if you have links use #makeMeScrollable div.scrollableArea a and so on. */
@@ -97,7 +101,7 @@
 
         <script type="text/ng-template" id="myModalContent.html">
             <div class="modal-header" style="color: #000000">
-                <h4 class="modal-title">Message from XKCD comic app</h4>
+                <h4 class="modal-title">{{modalTitle}}</h4>
             </div>
 
             <div class="modal-body" style="color: #000000; font-size: 20px;">
@@ -105,7 +109,7 @@
             </div>
 
             <div class="modal-footer">
-                <button class="btn btn-primary" ng-click="ok()">Got it!</button>
+                <button class="btn btn-primary" ng-click="ok()">Okay!</button>
             </div>
         </script>
 
@@ -141,12 +145,13 @@
 <!-- About Section -->
 <section class="tagsContainer">
     <form class="form-inline">
-        <p>
-            <label>Please specify number of top tags you are sending request for</label>
+        <p class="smallFont">
+            <label>Please specify number of top trending tags for <a href="http://xkcd.com">xkcd </a> comic.
+                <br/>(e.g. If you specify 5, it will send statistics for top 5 tags used in xkcd comics collection so far)</label>
         </p>
         <div class="form-group">
             <div class="input-group">
-                <div class="input-group-addon">Top Tags</div>
+                <div class="input-group-addon">Top Trending</div>
                 <input type="text" class="form-control" ng-model="numberOfTopTagsToRequest" id="numberOftopTagsValue"
                        placeholder="5">
 
@@ -154,7 +159,7 @@
             </div>
         </div>
 
-        <button data-ng-disabled="tagInfoButtonIsDisabled" data-ng-click="getTagInfoWith();" class="btn btn-primary">Get Tag Info</button>
+        <button data-ng-disabled="tagInfoButtonIsDisabled" data-ng-click="getTagInfoWith();" class="btn btn-primary">Get Trend Stats</button>
 
         <div id="chart">
 
@@ -165,20 +170,20 @@
 <section class="tagsContainer albumCollection">
 
     <form class="form-inline">
-        <p>
-            <label>Please tags separating in comma you are sending request for</label>
+        <p class="smallFont">
+            <label>Please set of tags collection you are fetching images for <br/>(Multiple tags can be separated by commas. If you specify tag apple, it will return all comics related to Apple Inc. or fruit apple)</label>
         </p>
 
         <div class="form-group">
             <div class="input-group">
-                <div class="input-group-addon">Tags List</div>
+                <div class="input-group-addon">Tags</div>
 
                 <input type="text" class="form-control" ng-model="tagsList" placeholder="">
 
             </div>
         </div>
 
-        <button data-ng-disabled="imagesByTagButtonIsDisabled" data-ng-click="getImagesMatchingTags();" class="btn btn-primary">Get Images</button>
+        <button data-ng-disabled="imagesByTagButtonIsDisabled" data-ng-click="getImagesMatchingTags();" class="btn btn-primary">Get Images by Tag(s)</button>
 
         <div class="makeMeScrollable" ng-style="{'height': maximumHeight}" ng-show="toShowMatchingTagsImages">
 
@@ -188,8 +193,8 @@
 
 <section class="tagsContainer imagesFromRange" style="background-color: #00B233">
     <form class="form-inline">
-        <p>
-            <label>Please specify the range of images you are sending request for</label>
+        <p class="smallFont">
+            <label>Please specify the range of image sequence you are sending request for <br/>(e.g. Sequence 1 to 10 will send all comics ranging from first to tenth comic)</label>
         </p>
         <div class="form-group">
             <label class="sr-only" for="sIndex">Start Index</label>
@@ -253,6 +258,8 @@
 </section>
 
 <div class="credits">
+    This entire application is the courtesy  of <a href="http://xkcd.com/">xkcd.com</a> which publishes such incredible comics collection
+    <br/>
 Bootstrap theme by the courtesy of  <a href="http://startbootstrap.com/">startbootstrap </a>
 </div>
 
@@ -326,16 +333,15 @@ Bootstrap theme by the courtesy of  <a href="http://startbootstrap.com/">startbo
     });
 </script>
 
-
-<script>
+    <script>
     //To get the tags of image with given identifier
-    function openDescription(inputImageIdentifier) {
+    function openDescription(inputImageIdentifier, imageTitle) {
 
         //This is very bad practive combining DOM with angular element, but i cannot think of alternative way to
         //Achieve what is being done here
 
         var angularController = angular.element(document.getElementById('page-top'));
-        angularController.scope().getTagsByImageIdentifier(inputImageIdentifier);
+        angularController.scope().getTagsByImageIdentifier(inputImageIdentifier, imageTitle);
     }
     </script>
 

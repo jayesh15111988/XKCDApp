@@ -10,38 +10,41 @@ angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
         var oldCollection = [];
         var oldImagesMatchingTags = [];
         var oldImagesFromRange = [];
+        var isPresentingModalView = false;
 
         $scope.toShowMatchingTagsImages = true;
         $scope.toShowInputRangeImages = true;
 
-        $scope.getTagsByImageIdentifier = function(inputImageIdentifier) {
-
+        $scope.getTagsByImageIdentifier = function(inputImageIdentifier, imageTitle) {
             var endURLForTagsWithImageIdentifier = baseURL + imageTagsCollection + "?imageIdentifier=" + inputImageIdentifier;
             $http.get(endURLForTagsWithImageIdentifier).
                 success(function (data, status, headers, config) {
                     var allTags = data.tagsCollection;
                     var escapedAllTagsString = $('<textarea />').html(allTags).text();
-                    $scope.open(escapedAllTagsString);
+                    $scope.open(escapedAllTagsString, imageTitle);
                 }).
                 error(function (data, status, headers, config) {
                     console.log("Error Occurred while fetching collection of tags for image with given identifier " + data);
                 });
         }
 
-        $scope.open = function (message) {
+        $scope.open = function (message, imageTitle) {
+            isPresentingModalView = true;
             var modalInstance = $modal.open({
                 templateUrl: 'myModalContent.html',
                 controller: 'ModalInstanceCtrl',
                 resolve: {
                     inputMessage : function() {
-                        return message;
+                        return {body: message, title : imageTitle};
                     }
                 }
             });
 
             modalInstance.result.then(function (selectedItem) {
+                isPresentingModalView = false;
                 console.log("Modal dismissed with ok button");
             }, function () {
+                isPresentingModalView = false;
                 console.log("Modal dismissed With cancel button");
             });
         };
@@ -107,7 +110,9 @@ angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
                     }
                     else {
                         $("div.imagesFromSequence").smoothDivScroll("getHtmlContent", "<div></div>", "replace");
-                        $scope.open("No images matching input sequence found in the database");
+                        if(isPresentingModalView == false) {
+                            $scope.open("No images matching input sequence found in the database","Message from XKCD comic app");
+                        }
                     }
                     $scope.maximumHeightForSequenceImages = data.maxHeight;
                 }).
@@ -139,9 +144,10 @@ angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
                             $("div.makeMeScrollable").smoothDivScroll("getHtmlContent", imagesCollection, "replace");
                         } else {
                             $("div.makeMeScrollable").smoothDivScroll("getHtmlContent", "<div></div>", "replace");
-                            $scope.open("No images matching combination of given tag(s) found in the database");
+                            if(isPresentingModalView == false) {
+                                $scope.open("No images matching combination of given tag(s) found in the database", "Message from XKCD comic app");
+                            }
                         }
-
                         $scope.maximumHeight = data.maxHeight
                     }).
                     error(function (data, status, headers, config) {
@@ -309,33 +315,34 @@ angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
             sendRequestToServerForNumberOfTopTags();
         }
 
+        //Classic code smell - This should really be fixed to make getMatchingImagesWithTag and other call only once.
+        //There is some issue fixing album height before image is loaded. Need to load image one more time after images
+        //Are loaded from href. Not sure how this can be fixed in more graceful fashion
+
         $scope.getImagesMatchingTags = function () {
             oldImagesMatchingTags = [];
             getMatchingImagesWithTag();
-
-            if(oldImagesMatchingTags.length > 0) {
                 setTimeout(function(){
                     getMatchingImagesWithTag();
                     oldImagesMatchingTags = [];
-                }, 1000);
-            }
+                }, 1500);
         }
 
         $scope.getImagesFromRange = function () {
             oldImagesFromRange = [];
             getImagesWithInputRange();
-            if(oldImagesFromRange.length > 0) {
                 setTimeout(function(){
                     getImagesWithInputRange();
                     oldImagesFromRange = [];
-                }, 1000);
-            }
+                }, 1500);
         }
     });
 
 angular.module('xkcdComicApp.controllers').controller('ModalInstanceCtrl', function ($scope, $modalInstance, inputMessage) {
 
-    $scope.modalMessage = inputMessage;
+    $scope.modalMessage = inputMessage.body;
+    $scope.modalTitle = inputMessage.title;
+
     $scope.ok = function () {
         $modalInstance.close();
     };
