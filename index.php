@@ -29,8 +29,8 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="httpss://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="httpss://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
 
@@ -219,7 +219,7 @@
                 <h2>Github Hosting</h2>
 
                 <p>This project along with JavaScript and PHP files is hosted on Github repository. You can follow the link below to check out the source</p>
-                <a href="httpss://github.com/jayesh15111988/XKCDApp" class="btn btn-default btn-lg">Visit
+                <a href="https://github.com/jayesh15111988/XKCDApp" class="btn btn-default btn-lg">Visit
                     Source Page</a>
             </div>
         </div>
@@ -240,15 +240,15 @@
             </p>
             <ul class="list-inline banner-social-buttons">
                 <li>
-                    <a href="httpss://twitter.com/JayeshKawli" class="btn btn-default btn-lg"><i
+                    <a href="https://twitter.com/JayeshKawli" class="btn btn-default btn-lg"><i
                             class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                 </li>
                 <li>
-                    <a href="httpss://github.com/jayesh15111988" class="btn btn-default btn-lg"><i
+                    <a href="https://github.com/jayesh15111988" class="btn btn-default btn-lg"><i
                             class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                 </li>
                 <li>
-                    <a href="httpss://plus.google.com/+jayeshkawli" class="btn btn-default btn-lg"><i
+                    <a href="https://plus.google.com/+jayeshkawli" class="btn btn-default btn-lg"><i
                             class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
                 </li>
             </ul>
@@ -298,18 +298,18 @@ Bootstrap theme by the courtesy of  <a href="https://startbootstrap.com/">startb
 		 specify the width in the CSS or inline. -->
 
 <!-- jQuery library - Please load it from Google API's -->
-<script src="httpss://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 
 <!-- jQuery UI (Custom Download containing only Widget and Effects Core)
      You can make your own at: https://jqueryui.com/download -->
 <script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
 
 <!-- Latest version (3.1.4) of jQuery Mouse Wheel by Brandon Aaron
-     You will find it here: httpss://github.com/brandonaaron/jquery-mousewheel -->
+     You will find it here: https://github.com/brandonaaron/jquery-mousewheel -->
 <script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
 
 <!-- jQuery Kinectic (1.8.2) used for touch scrolling -->
-<!-- httpss://github.com/davetayls/jquery.kinetic/ -->
+<!-- https://github.com/davetayls/jquery.kinetic/ -->
 <script src="js/jquery.kinetic.min.js" type="text/javascript"></script>
 
 <!-- Smooth Div Scroll 1.3 minified-->
