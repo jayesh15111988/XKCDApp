@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Jayesh Kawli">
@@ -17,9 +17,9 @@
 
     <!-- Custom Fonts -->
     <link href="css/Fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
           type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="css/d3Graphics.css" rel="stylesheet" type="text/css">
     <link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css"/>
 
@@ -29,8 +29,8 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="httpss://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="httpss://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
 
@@ -134,7 +134,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h1 class="brand-heading">XKCD Comics Viewer</h1>
-                    <p class="intro-text">A free, responsive, one page application to conveniently read your favorite<br><a href="http://xkcd.com/">XKCD comics</a>
+                    <p class="intro-text">A free, responsive, one page application to conveniently read your favorite<br><a href="https://xkcd.com/">XKCD comics</a>
                     </p>
                 </div>
             </div>
@@ -146,7 +146,7 @@
 <section class="tagsContainer">
     <form class="form-inline">
         <p class="smallFont">
-            <label>Please specify number of top trending tags for <a href="http://xkcd.com">xkcd </a> comic.
+            <label>Please specify number of top trending tags for <a href="https://xkcd.com">xkcd </a> comic.
                 <br/>(e.g. If you specify 5, it will send statistics for top 5 tags used in xkcd comics collection so far)</label>
         </p>
         <div class="form-group">
@@ -219,7 +219,7 @@
                 <h2>Github Hosting</h2>
 
                 <p>This project along with JavaScript and PHP files is hosted on Github repository. You can follow the link below to check out the source</p>
-                <a href="https://github.com/jayesh15111988/XKCDApp" class="btn btn-default btn-lg">Visit
+                <a href="httpss://github.com/jayesh15111988/XKCDApp" class="btn btn-default btn-lg">Visit
                     Source Page</a>
             </div>
         </div>
@@ -240,15 +240,15 @@
             </p>
             <ul class="list-inline banner-social-buttons">
                 <li>
-                    <a href="https://twitter.com/JayeshKawli" class="btn btn-default btn-lg"><i
+                    <a href="httpss://twitter.com/JayeshKawli" class="btn btn-default btn-lg"><i
                             class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                 </li>
                 <li>
-                    <a href="https://github.com/jayesh15111988" class="btn btn-default btn-lg"><i
+                    <a href="httpss://github.com/jayesh15111988" class="btn btn-default btn-lg"><i
                             class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                 </li>
                 <li>
-                    <a href="https://plus.google.com/+jayeshkawli" class="btn btn-default btn-lg"><i
+                    <a href="httpss://plus.google.com/+jayeshkawli" class="btn btn-default btn-lg"><i
                             class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
                 </li>
             </ul>
@@ -258,9 +258,9 @@
 </section>
 
 <div class="credits">
-    This entire application is the courtesy  of <a href="http://xkcd.com/">xkcd.com</a> which publishes such incredible comics collection
+    This entire application is the courtesy  of <a href="https://xkcd.com/">xkcd.com</a> which publishes such incredible comics collection
     <br/>
-Bootstrap theme by the courtesy of  <a href="http://startbootstrap.com/">startbootstrap </a>
+Bootstrap theme by the courtesy of  <a href="https://startbootstrap.com/">startbootstrap </a>
 </div>
 
 
@@ -279,8 +279,8 @@ Bootstrap theme by the courtesy of  <a href="http://startbootstrap.com/">startbo
 <script src="js/grayscale.js"></script>
 
 <!-- Angular JS CDN file -->
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
-<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+<script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
 
 <script src="js/Constants.js"></script>
 <script src="js/app.js"></script>
@@ -288,8 +288,8 @@ Bootstrap theme by the courtesy of  <a href="http://startbootstrap.com/">startbo
 <script src="js/controllers.js"></script>
 
 <!-- JS Files for D3 plotting -->
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script src="js/d3.v3.min.js"></script>
+<script src="js/d3.tip.v0.6.3.js"></script>
 
 <!-- Extra JAvaScript for showing images on slider view -->
 <!-- LOAD JAVASCRIPT LATE - JUST BEFORE THE BODY TAG
@@ -298,18 +298,18 @@ Bootstrap theme by the courtesy of  <a href="http://startbootstrap.com/">startbo
 		 specify the width in the CSS or inline. -->
 
 <!-- jQuery library - Please load it from Google API's -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="httpss://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 
 <!-- jQuery UI (Custom Download containing only Widget and Effects Core)
-     You can make your own at: http://jqueryui.com/download -->
+     You can make your own at: https://jqueryui.com/download -->
 <script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
 
 <!-- Latest version (3.1.4) of jQuery Mouse Wheel by Brandon Aaron
-     You will find it here: https://github.com/brandonaaron/jquery-mousewheel -->
+     You will find it here: httpss://github.com/brandonaaron/jquery-mousewheel -->
 <script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
 
 <!-- jQuery Kinectic (1.8.2) used for touch scrolling -->
-<!-- https://github.com/davetayls/jquery.kinetic/ -->
+<!-- httpss://github.com/davetayls/jquery.kinetic/ -->
 <script src="js/jquery.kinetic.min.js" type="text/javascript"></script>
 
 <!-- Smooth Div Scroll 1.3 minified-->
