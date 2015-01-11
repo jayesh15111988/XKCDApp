@@ -93,12 +93,13 @@ angular.module('xkcdComicApp.controllers', ['ui.bootstrap']).
         }
 
         function getImagesWithInputRange() {
-            $scope.maximumHeightForSequenceImages = "300px";
+
 
             //Hard coding url extension, cause Angular JS is a piece of shit just like Swift which would fault at any time it wants.
             //This is absurd and don't know why it fucking happens here - FIXED for now!
             if(oldImagesFromRange.length == 0)
             {
+                $scope.maximumHeightForSequenceImages = "300px";
                 console.log("From server");
             var endURLForImagesInputRange = baseURL + imagesByInputRange + "?startIndex=" + $scope.imageStartIndex+"&endIndex="+$scope.imageEndIndex;
             $http.get(endURLForImagesInputRange).

@@ -1,0 +1,5 @@
+UPDATE `sam` SET `identifier` = TRIM(TRAILING ',' FROM `identifier`);
+
+UPDATE `imagetags` SET `tag` = TRIM(TRAILING '.' FROM `tag`);
+
+UPDATE `tagsdatabase` SET `tagName` = TRIM(TRAILING '.' FROM `tagName`);
