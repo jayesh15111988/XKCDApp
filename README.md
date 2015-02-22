@@ -51,3 +51,4 @@ Below are some of the awesome screen shots of this app. In the meantime you can 
 </li>
 <hr/>
 <b>Feedback / suggestions / criticism are welcome as usual! </b>
+Tip : Please make sure to run http://jayeshkawli.com/xkcdapp/xkcdcomics.php periodically to refresh the database entries for latest comics collection. Otherwise some recent comics won't be available in the database
